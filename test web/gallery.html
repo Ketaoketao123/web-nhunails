@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Như Nails - Hình ảnh</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Như Nails</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="pricing.html">Bảng giá</a></li>
+                <li><a href="booking.html">Đặt lịch</a></li>
+                <li><a href="gallery.html">Hình ảnh</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="auth/login.html">Đăng nhập</a></li>
+                <li><a href="auth/register.html">Đăng ký</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button>Tìm</button>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Trang chủ</a>
+            <span>/</span>
+            <span>Thư Viện</span> <!-- Thay bằng tên trang hiện tại -->
+        </div>
+        <section class="gallery">
+            <h2>Bộ sưu tập hình ảnh Như Nails</h2>
+            
+            <div class="gallery-filter">
+                <button class="filter-button active" data-filter="all">Tất cả</button>
+                <button class="filter-button" data-filter="manicure">Manicure</button>
+                <button class="filter-button" data-filter="pedicure">Pedicure</button>
+                <button class="filter-button" data-filter="gel">Sơn Gel</button>
+                <button class="filter-button" data-filter="acrylic">Acrylic</button>
+            </div>
+            
+            <div class="gallery-container">
+                <a href="images/gallery1.jpg" data-lightbox="gallery" data-title="Manicure đính đá" class="gallery-item manicure">
+                    <img src="images/gallery1-thumb.jpg" alt="Manicure đính đá">
+                </a>
+                
+                <a href="images/gallery2.jpg" data-lightbox="gallery" data-title="Pedicure spa" class="gallery-item pedicure">
+                    <img src="images/gallery2-thumb.jpg" alt="Pedicure spa">
+                </a>
+                
+                <a href="images/gallery3.jpg" data-lightbox="gallery" data-title="Sơn Gel French" class="gallery-item gel">
+                    <img src="images/gallery3-thumb.jpg" alt="Sơn Gel French">
+                </a>
+                
+                <a href="images/gallery4.jpg" data-lightbox="gallery" data-title="Acrylic đính đá" class="gallery-item acrylic">
+                    <img src="images/gallery4-thumb.jpg" alt="Acrylic đính đá">
+                </a>
+                
+                <!-- Thêm nhiều ảnh khác -->
+            </div>
+            
+            <div class="video-container">
+                <h3>Video quy trình làm nail</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Như Nails. All rights reserved.</p>
+        <a href="index.html" class="footer-home-link">Về trang chủ</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Filter gallery items
+        document.querySelectorAll('.filter-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Xóa class active từ tất cả các nút
+                document.querySelectorAll('.filter-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Thêm class active cho nút được click
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+<div class="music-player">
+    <audio id="bgMusic" loop>
+        <source src="assets/music/Gangnam-Style-Michael-Lang.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+    <div class="player-controls">
+        <button id="musicToggle" class="music-btn">🎵 Bật nhạc</button>
+        <div class="volume-control">
+            <span>🔈</span>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+        </div>
+        <select id="songSelector">
+            <option value="assets/music/background.mp3">Nhạc nền 1</option>
+            <option value="assets/music/relaxing.mp3">Nhạc thư giãn</option>
+            <option value="assets/music/upbeat.mp3">Nhạc vui nhộn</option>
+        </select>
+    </div>
+</div>
+<a href="index.html" class="fixed-home-button" title="Về trang chủ">
+    <span class="home-icon">⌂</span>
+</a>
+<!-- Nút trở về trang chủ cố định -->
+<a href="index.html" class="home-fab" title="Về trang chủ" aria-label="Về trang chủ">
+    <i class="fas fa-home"></i>
+</a>
+</body>
+</html>

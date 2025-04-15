@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Như Nails - Bảng giá</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Như Nails</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="pricing.html">Bảng giá</a></li>
+                <li><a href="booking.html">Đặt lịch</a></li>
+                <li><a href="gallery.html">Hình ảnh</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="auth/login.html">Đăng nhập</a></li>
+                <li><a href="auth/register.html">Đăng ký</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button>Tìm</button>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Trang chủ</a>
+            <span>/</span>
+            <span>Bảng Giá</span> <!-- Thay bằng tên trang hiện tại -->
+        </div>
+        <section class="pricing">
+            <h2>Bảng giá dịch vụ</h2>
+            
+            <div class="price-tables">
+                <div class="price-table">
+                    <h3>Manicure</h3>
+                    <table>
+                        <tr>
+                            <td>Manicure cơ bản</td>
+                            <td>150,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Manicure đặc biệt</td>
+                            <td>250,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Manicure dưỡng ẩm</td>
+                            <td>300,000đ</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="price-table">
+                    <h3>Pedicure</h3>
+                    <table>
+                        <tr>
+                            <td>Pedicure cơ bản</td>
+                            <td>200,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Pedicure spa</td>
+                            <td>350,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Pedicure trị liệu</td>
+                            <td>400,000đ</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="price-table">
+                    <h3>Sơn Gel</h3>
+                    <table>
+                        <tr>
+                            <td>Sơn gel thường</td>
+                            <td>250,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Sơn gel French</td>
+                            <td>300,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Sơn gel đính đá (cơ bản)</td>
+                            <td>350,000đ</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="price-table">
+                    <h3>Acrylic Nails</h3>
+                    <table>
+                        <tr>
+                            <td>Acrylic trắng hồng</td>
+                            <td>500,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Acrylic trong</td>
+                            <td>550,000đ</td>
+                        </tr>
+                        <tr>
+                            <td>Acrylic đính đá</td>
+                            <td>700,000đ+</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="price-note">
+                <p><strong>Lưu ý:</strong> Bảng giá có thể thay đổi tùy theo thiết kế và phụ kiện đi kèm. Vui lòng liên hệ trực tiếp để biết giá chính xác.</p>
+                <a href="booking.html" class="cta-button">Đặt lịch ngay</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Như Nails. All rights reserved.</p>
+        <a href="index.html" class="footer-home-link">Về trang chủ</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <div class="music-player">
+        <audio id="bgMusic" loop>
+            <source src="assets/music/Gangnam-Style-Michael-Lang.mp3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ phát nhạc.
+        </audio>
+        <div class="player-controls">
+            <button id="musicToggle" class="music-btn">🎵 Bật nhạc</button>
+            <div class="volume-control">
+                <span>🔈</span>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+            </div>
+            <select id="songSelector">
+                <option value="assets/music/background.mp3">Nhạc nền 1</option>
+                <option value="assets/music/relaxing.mp3">Nhạc thư giãn</option>
+                <option value="assets/music/upbeat.mp3">Nhạc vui nhộn</option>
+            </select>
+        </div>
+    </div>
+    <a href="index.html" class="fixed-home-button" title="Về trang chủ">
+        <span class="home-icon">⌂</span>
+    </a>
+<!-- Nút trở về trang chủ cố định -->
+<a href="index.html" class="home-fab" title="Về trang chủ" aria-label="Về trang chủ">
+    <i class="fas fa-home"></i>
+</a>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Như Nails - Đăng ký thành viên</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-form">
+            <h2>Đăng ký thành viên Như Nails</h2>
+            <p>Nhận ưu đãi đặc biệt trong ngày sinh nhật</p>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Họ và tên:</label>
+                    <input type="text" id="regName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regPhone">Số điện thoại:</label>
+                    <input type="tel" id="regPhone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regEmail">Email:</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regDob">Ngày sinh:</label>
+                    <input type="date" id="regDob" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regPassword">Mật khẩu:</label>
+                    <input type="password" id="regPassword" required minlength="6">
+                </div>
+                
+                <button type="submit" class="cta-button">Đăng ký</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

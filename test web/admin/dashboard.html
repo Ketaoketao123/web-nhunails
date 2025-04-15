@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Như Nails - Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <h2>Như Nails Admin</h2>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li><a href="#">Quản lý thành viên</a></li>
+                    <li><a href="#">Lịch hẹn</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Thống kê</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="admin-search">
+                    <input type="text" placeholder="Tìm kiếm...">
+                </div>
+                <div class="admin-user">
+                    <span id="adminName"></span>
+                    <button id="logoutAdmin">Đăng xuất</button>
+                </div>
+            </header>
+            
+            <section class="admin-content">
+                <h2>Chào mừng quay trở lại</h2>
+                
+                <div class="stats-cards">
+                    <div class="card">
+                        <h3>Tổng thành viên</h3>
+                        <p id="totalMembers">0</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sinh nhật hôm nay</h3>
+                        <p id="birthdayMembers">0</p>
+                    </div>
+                    <div class="card">
+                        <h3>Lịch hẹn hôm nay</h3>
+                        <p id="todayBookings">0</p>
+                    </div>
+                </div>
+                
+                <div class="recent-members">
+                    <h3>Thành viên mới nhất</h3>
+                    <table id="membersTable">
+                        <thead>
+                            <tr>
+                                <th>Họ tên</th>
+                                <th>Email</th>
+                                <th>SĐT</th>
+                                <th>Ngày sinh</th>
+                                <th>Điểm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dữ liệu sẽ được thêm bằng JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>

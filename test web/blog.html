@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Như Nails - Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Như Nails</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="pricing.html">Bảng giá</a></li>
+                <li><a href="booking.html">Đặt lịch</a></li>
+                <li><a href="gallery.html">Hình ảnh</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="auth/login.html">Đăng nhập</a></li>
+                <li><a href="auth/register.html">Đăng ký</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button>Tìm</button>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Trang chủ</a>
+            <span>/</span>
+            <span>Blog</span> <!-- Thay bằng tên trang hiện tại -->
+        </div>
+        <section class="blog-posts">
+            <h2>Blog Như Nails</h2>
+            <div class="search-container">
+                <input type="text" id="blogSearch" placeholder="Tìm kiếm bài viết...">
+                <button onclick="searchBlog()">Tìm kiếm</button>
+            </div>
+            
+            <div class="posts-container">
+                <!-- Các bài viết blog sẽ được thêm động bằng JavaScript -->
+                <article class="blog-post">
+                    <img src="images/blog1.jpg" alt="Xu hướng nail mùa hè">
+                    <h3>Xu hướng nail mùa hè 2023</h3>
+                    <p class="post-meta">Đăng ngày: 15/06/2023 | Chuyên mục: Xu hướng</p>
+                    <p class="post-excerpt">Cùng Như Nails điểm qua những xu hướng nail hot nhất mùa hè này...</p>
+                    <a href="#" class="read-more">Đọc tiếp</a>
+                </article>
+                
+                <!-- Thêm các bài viết khác tương tự -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Như Nails. All rights reserved.</p>
+        <a href="index.html" class="footer-home-link">Về trang chủ</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function searchBlog() {
+            const searchTerm = document.getElementById('blogSearch').value.toLowerCase();
+            const posts = document.querySelectorAll('.blog-post');
+            
+            posts.forEach(post => {
+                const title = post.querySelector('h3').textContent.toLowerCase();
+                const excerpt = post.querySelector('.post-excerpt').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+    </script>
+<div class="music-player">
+    <audio id="bgMusic" loop>
+        <source src="assets/music/Gangnam-Style-Michael-Lang.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+    <div class="player-controls">
+        <button id="musicToggle" class="music-btn">🎵 Bật nhạc</button>
+        <div class="volume-control">
+            <span>🔈</span>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+        </div>
+        <select id="songSelector">
+            <option value="assets/music/background.mp3">Nhạc nền 1</option>
+            <option value="assets/music/relaxing.mp3">Nhạc thư giãn</option>
+            <option value="assets/music/upbeat.mp3">Nhạc vui nhộn</option>
+        </select>
+    </div>
+</div>
+<a href="index.html" class="fixed-home-button" title="Về trang chủ">
+    <span class="home-icon">⌂</span>
+</a>
+<!-- Nút trở về trang chủ cố định -->
+<a href="index.html" class="home-fab" title="Về trang chủ" aria-label="Về trang chủ">
+    <i class="fas fa-home"></i>
+</a>
+</body>
+</html>

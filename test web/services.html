@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Như Nails - Dịch vụ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Như Nails</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="pricing.html">Bảng giá</a></li>
+                <li><a href="booking.html">Đặt lịch</a></li>
+                <li><a href="gallery.html">Hình ảnh</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="auth/login.html">Đăng nhập</a></li>
+                <li><a href="auth/register.html">Đăng ký</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button>Tìm</button>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Trang chủ</a>
+            <span>/</span>
+            <span>Dịch Vụ</span> <!-- Thay bằng tên trang hiện tại -->
+        </div>
+        <section class="services">
+            <h2>Các dịch vụ của Như Nails</h2>
+            
+            <div class="service-categories">
+                <div class="service-category">
+                    <img src="images/manicure.jpg" alt="Manicure">
+                    <h3>Manicure</h3>
+                    <p>Chăm sóc, làm đẹp móng tay với nhiều kiểu dáng và màu sắc đa dạng.</p>
+                    <ul>
+                        <li>Manicure cơ bản</li>
+                        <li>Manicure đặc biệt</li>
+                        <li>Manicure dưỡng ẩm</li>
+                    </ul>
+                </div>
+                
+                <div class="service-category">
+                    <img src="images/pedicure.jpg" alt="Pedicure">
+                    <h3>Pedicure</h3>
+                    <p>Chăm sóc chuyên nghiệp cho đôi chân và móng chân của bạn.</p>
+                    <ul>
+                        <li>Pedicure cơ bản</li>
+                        <li>Pedicure spa</li>
+                        <li>Pedicure trị liệu</li>
+                    </ul>
+                </div>
+                
+                <div class="service-category">
+                    <img src="images/gel-nails.jpg" alt="Gel Nails">
+                    <h3>Gel Nails</h3>
+                    <p>Sơn gel bền đẹp lâu dài, không bong tróc trong thời gian dài.</p>
+                    <ul>
+                        <li>Sơn gel thường</li>
+                        <li>Sơn gel French</li>
+                        <li>Sơn gel đính đá</li>
+                    </ul>
+                </div>
+                
+                <div class="service-category">
+                    <img src="images/acrylic.jpg" alt="Acrylic Nails">
+                    <h3>Acrylic Nails</h3>
+                    <p>Kéo dài và tạo hình móng theo phong cách cá nhân của bạn.</p>
+                    <ul>
+                        <li>Acrylic trắng hồng</li>
+                        <li>Acrylic trong</li>
+                        <li>Acrylic đính đá</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Như Nails. All rights reserved.</p>
+        <a href="index.html" class="footer-home-link">Về trang chủ</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <div class="music-player">
+        <audio id="bgMusic" loop>
+            <source src="assets/music/Gangnam-Style-Michael-Lang.mp3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ phát nhạc.
+        </audio>
+        <div class="player-controls">
+            <button id="musicToggle" class="music-btn">🎵 Bật nhạc</button>
+            <div class="volume-control">
+                <span>🔈</span>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+            </div>
+            <select id="songSelector">
+                <option value="assets/music/background.mp3">Nhạc nền 1</option>
+                <option value="assets/music/relaxing.mp3">Nhạc thư giãn</option>
+                <option value="assets/music/upbeat.mp3">Nhạc vui nhộn</option>
+            </select>
+        </div>
+    </div>
+    <a href="index.html" class="fixed-home-button" title="Về trang chủ">
+        <span class="home-icon">⌂</span>
+    </a>
+<!-- Nút trở về trang chủ cố định -->
+<a href="index.html" class="home-fab" title="Về trang chủ" aria-label="Về trang chủ">
+    <i class="fas fa-home"></i>
+</a>
+</body>
+</html>
